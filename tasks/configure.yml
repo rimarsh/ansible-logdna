@@ -4,50 +4,50 @@
 - name: Setting LogDNA Ingestion Key
   become: true
   become_method: sudo
-  shell: "logdna-agent -k {{ conf_key }}"
-  when: conf_key != ""
+  shell: "logdna-agent -k {{ logdna_conf_key }}"
+  when: logdna_conf_key != ""
 
 - name: Using Alternate Config File
   become: true
   become_method: sudo
-  shell: "logdna-agent -c {{ conf_config }}"
-  when: conf_config != ""
+  shell: "logdna-agent -c {{ logdna_conf_config }}"
+  when: logdna_conf_config != ""
 
 - name: Adding Log Directories
   become: true
   become_method: sudo
-  shell: "logdna-agent -d {{ conf_logdir }}"
-  when: conf_logdir != ""
+  shell: "logdna-agent -d {{ logdna_conf_logdir }}"
+  when: logdna_conf_logdir != ""
 
 - name: Adding Log Files
   become: true
   become_method: sudo
-  shell: "logdna-agent -f {{ conf_logfile }}"
-  when: conf_logfile != ""
+  shell: "logdna-agent -f {{ logdna_conf_logfile }}"
+  when: logdna_conf_logfile != ""
 
 - name: Excluding Files from Log Directories
   become: true
   become_method: sudo
-  shell: "logdna-agent -e {{ conf_exclude }}"
-  when: conf_exclude != ""
+  shell: "logdna-agent -e {{ logdna_conf_exclude }}"
+  when: logdna_conf_exclude != ""
 
 - name: Filtering Out Lines Matching Pattern
   become: true
   become_method: sudo
-  shell: "logdna-agent -r {{ conf_exclude_regex }}"
-  when: conf_exclude_regex != ""
+  shell: "logdna-agent -r {{ logdna_conf_exclude_regex }}"
+  when: logdna_conf_exclude_regex != ""
 
 - name: Using Alternate Hostname
   become: true
   become_method: sudo
-  shell: "logdna-agent -n {{ conf_hostname }}"
-  when: conf_hostname != ""
+  shell: "logdna-agent -n {{ logdna_conf_hostname }}"
+  when: logdna_conf_hostname != ""
 
 - name: Setting Tags for This Host
   become: true
   become_method: sudo
-  shell: "logdna-agent -t {{ conf_tags }}"
-  when: conf_tags != ""
+  shell: "logdna-agent -t {{ logdna_conf_tags }}"
+  when: logdna_conf_tags != ""
 
 - debug:
     msg: "LogDNA Agent Configuration is Done!"

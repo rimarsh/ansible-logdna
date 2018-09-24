@@ -2,16 +2,16 @@
 # Parameters:
 
 ## Configuration:
-conf_key: ""
-conf_config: ""
-conf_logdir: ""
-conf_logfile: ""
-conf_exclude: ""
-conf_exclude_regex: ""
-conf_hostname: ""
-conf_tags: ""
+logdna_conf_key: ""
+logdna_conf_config: ""
+logdna_conf_logdir: ""
+logdna_conf_logfile: ""
+logdna_conf_exclude: ""
+logdna_conf_exclude_regex: ""
+logdna_conf_hostname: ""
+logdna_conf_tags: ""
 
 ## Agent State:
-agent_install: true
-agent_config: true
-agent_service: started
+logdna_agent_install: true
+logdna_agent_config: true
+logdna_agent_service: started
